@@ -24,6 +24,12 @@ exports.getAll = function () {
   return result;
 };
 
+exports.getOne = function (cubeId) {
+  const cube = cubes.find((x) => x.id === cubeId);
+
+  return cube;
+};
+
 exports.create = function (cubeData) {
   const newCube = {
     id: uniqid(),
