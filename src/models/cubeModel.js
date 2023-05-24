@@ -18,3 +18,16 @@ const cubes = [
     difficultyLevel: "4",
   },
 ];
+
+exports.create = function (cubeData) {
+  const newCube = {
+    id: uniqid(),
+    ...cubeData,
+  };
+
+  cubes.push(newCube);
+
+  console.log(cubes);
+
+  return newCube;
+};
