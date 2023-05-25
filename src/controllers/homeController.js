@@ -2,9 +2,11 @@ const router = require("express").Router();
 const cubeModel = require("../models/cubeModel");
 
 router.get("/", (req, res) => {
-  const cubes = cubeModel.getAll();
+  const { search, from, to } = req.query;
 
-  res.render("index", { cubes });
+  const cubes = cubeModel.getAll(search, from, to);
+
+  res.render("index", { cubes, search, from, to });
 });
 
 router.get("/about", (req, res) => {
