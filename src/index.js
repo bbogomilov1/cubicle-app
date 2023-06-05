@@ -17,7 +17,7 @@ dbConnect()
     console.log("DB connected succesfully");
   })
   .catch((err) => {
-    console.log(`DB error occurred: ${err}`);
+    console.log(`DB error occurred: ${err.message}`);
   });
 
 app.use(routes);
