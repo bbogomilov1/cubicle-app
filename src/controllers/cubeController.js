@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const cubeModel = require("../models/cubeModel");
+const cubeModel = require("../managers/cubeManager");
 
 router.get("/create", (req, res) => {
   res.render("create");

@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const cubeModel = require("../models/cubeModel");
+const cubeModel = require("../managers/cubeManager");
 
 router.get("/", (req, res) => {
   const { search, from, to } = req.query;
