@@ -22,10 +22,8 @@ exports.getAll = async function (search, from, to) {
 
 exports.getOne = (cubeId) => Cube.findId(cubeId);
 
-exports.create = async (cubeData) => {
+exports.create = (cubeData) => {
   const cube = new Cube(cubeData);
 
-  await cube.save();
-
-  return cube;
+  return cube.save();
 };
