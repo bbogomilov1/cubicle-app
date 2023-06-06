@@ -1,4 +1,4 @@
-const Cube = require("./models/Cube");
+const Cube = require("../models/CubeModel");
 
 exports.getAll = async function (search, from, to) {
   let result = await Cube.find().lean();
