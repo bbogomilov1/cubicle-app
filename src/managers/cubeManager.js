@@ -20,7 +20,7 @@ exports.getAll = async function (search, from, to) {
   return result;
 };
 
-exports.getOne = (cubeId) => Cube.findId(cubeId);
+exports.getOne = (cubeId) => Cube.findById(cubeId);
 exports.getOneWithAccessories = (cubeId) =>
   this.getOne(cubeId).populate("accessories");
 
