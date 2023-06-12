@@ -6,7 +6,9 @@ const authMiddleware = async (req, res, next) => {
 
   if (token) {
     try {
-      const user = await jwt.verify(token, SECRET);
+      const decodedToken = await jwt.verify(token, SECRET);
+      res.locals.user = decodedToken;
+      res.locals.isAuthenticated = true;
 
       req.user = user;
 
