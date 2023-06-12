@@ -29,3 +29,7 @@ exports.create = (cubeData) => {
 
   return cube.save();
 };
+
+exports.edit = (cubeId, cubeData) => Cube.findByIdAndUpdate(cubeId, cubeData);
+
+exports.delete = (cubeId) => Cube.findByIdAndDelete(cubeId);
